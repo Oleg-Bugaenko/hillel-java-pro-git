@@ -2,12 +2,14 @@ import java.util.concurrent.Callable;
 
 public class MyApp {
     public static void main(String[] args) {
-        Cat cat = new Cat("Alex");
-        cat.running(200);
 
-        Dog dog = new Dog("Rex");
-        dog.running(350);
+        Animals[] pets = {new Cat("Alex"),
+                new Dog("Butch")};
 
-
+        for (Animals pet: pets) {
+            pet.running(120);
+            pet.swimming(150);
+            System.out.println("------------------");
+        }
     }
 }
